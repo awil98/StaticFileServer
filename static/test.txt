@@ -1,0 +1,30 @@
+public string toString(){
+  if(loadSize > 0){
+    private int jeans = 0;
+    private int tshirts = 0;
+    private int socks = 0;
+    int i;
+    for(i = 0; i < load.length(); i++){
+      if(load[i].getName() == "jeans"){
+        jeans++;
+      }else if(load[i].getName() == "t-shirt"){
+        tshirt++;
+      }else{
+        socks++;
+      }
+    }
+    return "A washer with " + jeans + "jeans" +  tshirts + " t-shirts" + socks + "socks";
+  }else{
+    return "An empty washer";
+  }
+}
+
+public boolean isTemperatureOK(double temperature){
+  int i;
+  for(i = 0; i < load.length(); i++){
+    if(temperature > load[i].getMaxTemperature() && load[i].getName() == "jeans" || load[i].getName() == "tshirt"){
+        return false;
+    }
+  }
+  return true;
+}
